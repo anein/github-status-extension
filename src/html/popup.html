@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Github.com status</title>
+</head>
+<body>
+
+<main class="content">
+
+  <section>
+    <h4>Change Log</h4>
+  </section>
+
+  <section class="empty hide">
+    <hr>
+    <p>
+      There are no statuses yet. ¯\_(ツ)_/¯
+    </p>
+  </section>
+
+  <!-- Current issue -->
+  <section class="status-item current-status hide ">
+
+    <div>
+      <h3 class="header-issue">
+        <span data-name="status"></span>
+      </h3>
+    </div>
+
+    <article>
+      <p data-name="description"></p>
+      <div class="date">
+        <time data-name="date"></time>
+        <span class="issue-id">• ID #<span data-name="guid"></span></span>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- previous issue -->
+  <section class="status-item previous-status hide ">
+
+    <div>
+      <h3 class="header-issue">
+        <span data-name="status"></span>
+      </h3>
+    </div>
+
+    <article>
+      <p data-name="description"></p>
+      <div class="date">
+        <time data-name="date"></time>
+        <span class="issue-id">• ID #<span data-name="guid"></span></span>
+      </div>
+    </article>
+
+  </section>
+
+
+</main>
+
+<script src="../js/popup.js"></script>
+
+</body>
+</html>

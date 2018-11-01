@@ -1,0 +1,70 @@
+:root {
+  --color-dim   : #8899a6;
+  --color-good  : #339966;
+  --color-minor : #f29d50;
+  --colo-major  : #cc3300;
+  --color-title : #38444d;
+  --color-text  : #38444d;
+}
+
+html, body {
+  background-color : rgb(255, 255, 255);
+}
+
+.content {
+  width   : 340px;
+  padding : 4px;
+}
+
+h4 {
+  font-size : 16px;
+  color     : var(--color-title);
+  margin    : 0 0 18px;
+}
+
+hr {
+  border-color : var(--color-dim);
+  border-width : 1px 0 0 0;
+}
+
+.hide {
+  display : none;
+}
+
+.header-issue {
+  padding-bottom : 0;
+  margin         : 0;
+  text-transform : capitalize;
+}
+
+article {
+  font-size : 16px;
+  color     : var(--color-text);
+}
+
+p {
+  margin : 8px 0;
+}
+
+.status-item {
+  padding    : 10px 0;
+  border-top : 1px solid var(--color-dim);
+}
+
+.date {
+  color      : var(--color-dim);
+  font-style : italic;
+  font-size  : 12px;
+}
+
+.good {
+  color : var(--color-good);
+}
+
+.minor {
+  color : var(--color-minor);
+}
+
+.major {
+  color : var(--colo-major);
+}

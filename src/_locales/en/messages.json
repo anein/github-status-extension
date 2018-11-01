@@ -1,0 +1,14 @@
+{
+  "ext_name"       : {
+    "message": "Github.com Service Status"
+  },
+  "ext_short_name" : {
+    "message": "Observe the status of github.com."
+  },
+  "ext_description": {
+    "message": "Stay on top of the status of github.com and its status messages."
+  },
+  "ext_author"     : {
+    "message": "Alexander Ein (@AlexanderEin)"
+  }
+}
