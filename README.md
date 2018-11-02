@@ -18,7 +18,7 @@ otherwise uses the index page of [status.github.com](https://status.github.com/m
 ![](.media/preview_1.png)
 ![](.media/preview_2.png)
 
-## Issues
+## Github Issues
 
 |Icon| Description|
 |---|:---:|
