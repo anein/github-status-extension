@@ -55,7 +55,7 @@ export class Issue implements IIssue {
   }
 
   set guid(value: number | string) {
-    this.__guid = parseInt(value.toString(), 10);
+    this.__guid = parseInt(value.toString(), 10) || 0;
   }
 
   get icons(): IIcons {

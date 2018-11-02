@@ -59,9 +59,9 @@ export class RSSParser extends BaseParser {
    */
   private getGUID(): string {
     // TODO: check format of pubDate
-    return this.__root
-      .querySelector("pubDate")
-      .innerHTML.replace(/[:+T\-]/g, "")
-      .slice(0, -4);
+    return new Date( this.__root.querySelector( "pubDate" ).innerHTML )
+      .toJSON()
+      .replace( /[:+T\-\.Z]/g, "" )
+      .slice( 0, -3 );
   }
 }
