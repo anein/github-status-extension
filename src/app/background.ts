@@ -6,7 +6,6 @@ import { IIssue } from "@/models/interfaces/IIssue";
 import { StorageSingleton } from "@/models/StorageModel";
 
 (() => {
-
   /**
    * Gets github issues.
    *
@@ -17,7 +16,6 @@ import { StorageSingleton } from "@/models/StorageModel";
    *
    */
   async function getGithubStatus() {
-
     // 1. Make an attempt to fetch issues
     const fetcher = new Fetcher();
     fetcher.addBehaviour(new RSSFetcher());
@@ -32,7 +30,6 @@ import { StorageSingleton } from "@/models/StorageModel";
     updateBrowserAction(issue);
     updatePopup(issue);
     addToStorage(issue);
-
   }
 
   /**
@@ -41,10 +38,8 @@ import { StorageSingleton } from "@/models/StorageModel";
    * @param model
    */
   function updateBrowserAction(model: IIssue) {
-
     chrome.browserAction.setTitle({ title: `${model.description} \nDate: ${new Date(model.date).toLocaleString()}` });
     chrome.browserAction.setIcon({ path: model.icons });
-
   }
 
   /**
@@ -52,10 +47,8 @@ import { StorageSingleton } from "@/models/StorageModel";
    *
    */
   function addToStorage(model: IIssue) {
-
     StorageSingleton.Instance.currentStatus = model;
     StorageSingleton.Instance.save();
-
   }
 
   /**
@@ -68,20 +61,14 @@ import { StorageSingleton } from "@/models/StorageModel";
 
   //
   chrome.runtime.onInstalled.addListener(() => {
-
     getGithubStatus();
 
     chrome.alarms.create(MessageType.ALARM_TICK, { periodInMinutes: 1 });
-
   });
 
-  chrome.alarms.onAlarm.addListener((alarm) => {
-
+  chrome.alarms.onAlarm.addListener(alarm => {
     if (alarm.name === MessageType.ALARM_TICK) {
-
       getGithubStatus();
     }
-
   });
-
 })();

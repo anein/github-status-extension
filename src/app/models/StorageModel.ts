@@ -5,7 +5,6 @@ import { IStorage } from "@/models/interfaces/IStorage";
  * Stores current and previous statuses.
  */
 export class StorageSingleton {
-
   /**
    * Store instance
    */
@@ -32,6 +31,10 @@ export class StorageSingleton {
     return this.__instance;
   }
 
+  get previousStatus(): IIssue {
+    return this.__previousStatus;
+  }
+
   get currentStatus(): IIssue {
     return this.__status;
   }
@@ -41,32 +44,32 @@ export class StorageSingleton {
    *
    */
   set currentStatus(model: IIssue) {
-    if (this.__status && this.__status.guid !== model.guid) {
-      this.__previousStatus = Object.assign({}, this.__status);
-    }
-
     this.__status = model;
   }
 
   /**
    * Hide constructor
    */
-  private constructor() {
+  private constructor() {}
 
-  }
+  public async save() {
+    try {
+      const data = (await this.fetch()) as IStorage;
 
-  public save() {
-    chrome.storage.local.set(this.getStatuses());
+      this.__previousStatus = data && data.current && data.current.guid !== this.__status.guid ? data.current : null;
+
+      chrome.storage.local.set(this.getStatuses());
+    } catch (e) {
+      return;
+    }
   }
 
   public async fetch() {
-
-    return await (new Promise((resolve, reject) => {
+    return await new Promise((resolve, reject) => {
       chrome.storage.local.get((data: IStorage) => {
         resolve(data);
       });
-    }));
-
+    });
   }
 
   /**
@@ -75,9 +78,8 @@ export class StorageSingleton {
   private getStatuses(): IStorage {
     //
     return {
-      current : (this.__status) ? this.__status.serialize() : null,
-      previous: (this.__previousStatus) ? this.__previousStatus : null
+      current: this.__status ? this.__status.serialize() : null,
+      previous: this.__previousStatus ? this.__previousStatus : null
     };
   }
-
 }
