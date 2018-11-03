@@ -27,6 +27,8 @@ import { StorageSingleton } from "@/models/StorageModel";
       return;
     }
 
+    console.log("");
+
     updateBrowserAction(issue);
     updatePopup(issue);
     addToStorage(issue);
