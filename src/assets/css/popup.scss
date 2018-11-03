@@ -1,19 +1,23 @@
+$color-dim : rgb(136, 153, 166);
+$color-good : rgb(51, 153, 102);
+$color-minor : rgb(242, 157, 80);
+$color-major : rgb(204, 51, 0);
+$color-title : rgb(56, 68, 77);
+$color-text : rgb(56, 68, 77);
+$color-date : rgb(119, 119, 119);
+
 :root {
-  --color-dim   : #8899a6;
-  --color-good  : #339966;
-  --color-minor : #f29d50;
-  --colo-major  : #cc3300;
-  --color-title : #38444d;
-  --color-text  : #38444d;
+  --color-dim   : #{$color-dim};
+  --color-good  : #{$color-good};
+  --color-minor : #{$color-minor};
+  --color-major : #{$color-major};
+  --color-title : #{$color-title};
+  --color-text  : #{$color-text};
+  --color-date  : #{$color-date};
 }
 
 html, body {
   background-color : rgb(255, 255, 255);
-}
-
-.content {
-  width   : 340px;
-  padding : 4px;
 }
 
 h4 {
@@ -27,16 +31,6 @@ hr {
   border-width : 1px 0 0 0;
 }
 
-.hide {
-  display : none;
-}
-
-.header-issue {
-  padding-bottom : 0;
-  margin         : 0;
-  text-transform : capitalize;
-}
-
 article {
   font-size : 16px;
   color     : var(--color-text);
@@ -46,15 +40,38 @@ p {
   margin : 8px 0;
 }
 
+.hide {
+  display : none;
+}
+
+.content {
+  width   : 340px;
+  padding : 4px;
+}
+
+.header-issue {
+  padding-bottom : 0;
+  margin         : 0;
+  text-transform : capitalize;
+}
+
 .status-item {
   padding    : 10px 0;
   border-top : 1px solid var(--color-dim);
 }
 
 .date {
-  color      : var(--color-dim);
-  font-style : italic;
-  font-size  : 12px;
+  color     : var(--color-date);
+  font-size : 12px;
+}
+
+.hint {
+  color     : var(--color-dim);
+  font-size : 12px;
+}
+
+.issue {
+  margin-right : 5px;
 }
 
 .good {
@@ -66,5 +83,5 @@ p {
 }
 
 .major {
-  color : var(--colo-major);
+  color : var(--color-major);
 }
