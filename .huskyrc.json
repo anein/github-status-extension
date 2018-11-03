@@ -1,0 +1,13 @@
+{
+  "husky"      : {
+    "hooks": {
+      "pre-commit": "yarn run list && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,json,css}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}

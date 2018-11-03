@@ -10,19 +10,7 @@
     "buid"      : "webpack --config config/webpack.prod.config.js",
     "buid:opera": "webpack --env.browser=opera --config config/webpack.prod.config.js",
     "format"    : "pretty-quick --staged",
-    "lint"      : "tslint -c ./tslint.json -p ./tsconfig.json",
-    "pre-commit": "yarn run format && yarn run lint"
-  },
-  "husky"          : {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged"    : {
-    "*.{ts,json,css}": [
-      "prettier --write",
-      "git add"
-    ]
+    "lint"      : "tslint -c ./tslint.json -p ./tsconfig.json"
   },
   "devDependencies": {
     "@types/chrome"              : "^0.0.74",
