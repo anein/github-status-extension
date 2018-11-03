@@ -12,17 +12,6 @@
     "format"    : "pretty-quick --staged",
     "lint"      : "tslint -c ./tslint.json -p ./tsconfig.json"
   },
-  "husky"          : {
-    "hooks": {
-      "pre-commit": "yarn run list && lint-staged"
-    }
-  },
-  "lint-staged"    : {
-    "*.{ts,json,css}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
   "devDependencies": {
     "@types/chrome"              : "^0.0.74",
     "@types/core-js"             : "^2.5.0",
