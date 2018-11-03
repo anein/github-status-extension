@@ -11,7 +11,7 @@
     "buid:opera": "webpack --env.browser=opera --config config/webpack.prod.config.js",
     "format"    : "pretty-quick --staged",
     "lint"      : "tslint -c ./tslint.json -p ./tsconfig.json",
-    "precommit" : "run-s format lint"
+    "pre-commit": "run-s format lint"
   },
   "husky"          : {
     "hooks": {
