@@ -13,6 +13,11 @@
     "lint"      : "tslint -c ./tslint.json -p ./tsconfig.json",
     "pre-commit": "yarn run lint && yarn run format"
   },
+  "husky"          : {
+    "hooks": {
+      "pre-commit": ""
+    }
+  },
   "devDependencies": {
     "@types/chrome"              : "^0.0.74",
     "@types/core-js"             : "^2.5.0",
