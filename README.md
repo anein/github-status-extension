@@ -12,8 +12,8 @@
 <br>
 
 ## Preview
-The extension fetches data from the official [rss channel](https://status.github.com/mesages.rss) of Guthub,
-otherwise uses the index page of [status.github.com](https://status.github.com/mesages) as a source. The extension updates its state every minute.
+The extension fetches data from the official [rss channel](https://status.github.com/messages.rss) of Guthub,
+otherwise uses the index page of [status.github.com](https://status.github.com/messages) as a source. The extension updates its state every minute.
 
 ![](.media/preview_1.png)
 ![](.media/preview_2.png)
