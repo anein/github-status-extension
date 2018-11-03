@@ -159,5 +159,5 @@ fabric.properties
 .idea/sonarlint
 
 ###
-
+extension/
 *.zip
