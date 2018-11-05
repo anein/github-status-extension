@@ -7,7 +7,10 @@
 		Stay on top of the status of github.com and its status messages.
 	</p>
 	<br>
-	<br>
+  <a href="https://chrome.google.com/webstore/detail/githubcom-service-status/deljhiibgbhiilpbljbchaoclammdjgn">
+    <img src="https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_340x96.png" />
+  </a>
+	
 </div>
 <br>
 
