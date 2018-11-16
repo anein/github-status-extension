@@ -16,10 +16,10 @@ import { StorageSingleton } from "@/models/StorageModel";
    *
    */
   async function getGithubStatus() {
-    // 1. Make an attempt to fetch issues
+    // 1. Make attempts to fetch issues
     const fetcher = new Fetcher();
-    fetcher.addBehaviour(new RSSFetcher());
     fetcher.addBehaviour(new SiteFetcher());
+    fetcher.addBehaviour(new RSSFetcher());
 
     const issue = await fetcher.fetch();
 
@@ -66,7 +66,7 @@ import { StorageSingleton } from "@/models/StorageModel";
     chrome.alarms.create(MessageType.ALARM_TICK, { periodInMinutes: 1 });
   });
 
-  chrome.alarms.onAlarm.addListener(alarm => {
+  chrome.alarms.onAlarm.addListener((alarm) => {
     if (alarm.name === MessageType.ALARM_TICK) {
       getGithubStatus();
     }
