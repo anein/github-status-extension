@@ -4,11 +4,11 @@ const webpackDevConfig = require("./webpack.dev.config");
 module.exports = (env) => {
   return [plugins.webpackMerge(webpackDevConfig[0], {
     mode        : "production",
-    devtool     : "source-map",
+    devtool     : "none",
     cache       : true,
     optimization: {
       // for Opera, we should disable obfuscation
-      minimize         : (!env || env.browser !== "opera"),
+      minimize         : (!env || env.browser === "chrome"),
       mangleWasmImports: true,
       occurrenceOrder  : true
     },
