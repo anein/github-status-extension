@@ -7,16 +7,21 @@
 		Stay on top of the status of github.com and its status messages.
 	</p>
 	<br>
-  <a href="https://chrome.google.com/webstore/detail/githubcom-service-status/deljhiibgbhiilpbljbchaoclammdjgn">
+  
+  <p align="center">
+      <a href="https://chrome.google.com/webstore/detail/githubcom-service-status/deljhiibgbhiilpbljbchaoclammdjgn">
     <img  align="left" src="https://developer.chrome.com/webstore/images/ChromeWebStore_Badge_v2_206x58.png" />
   </a>
   
    <a href="https://addons.mozilla.org/en-US/firefox/addon/github-com-service-status/">
     <img  align="left"  src="https://addons.cdn.mozilla.net/static/img/addons-buttons/AMO-button_1.png" />
   </a>
+  
+  </p>
 	
 </div>
-<br>
+<br />
+<br />
 
 ## Preview
 The extension fetches data from the official [rss channel](https://status.github.com/messages.rss) of Guthub,
