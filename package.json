@@ -7,15 +7,15 @@
   "private"        : false,
   "scripts"        : {
     "dev"       : "webpack --watch --progress --config config/webpack.dev.config.js",
-    "buid"      : "webpack --config config/webpack.prod.config.js",
-    "buid:opera": "webpack --env.browser=opera --config config/webpack.prod.config.js",
+    "build"      : "webpack --config config/webpack.prod.config.js",
+    "build:opera": "webpack --env.browser=opera --config config/webpack.prod.config.js",
     "format"    : "pretty-quick --staged",
     "lint"      : "tslint -c ./tslint.json -p ./tsconfig.json",
     "pre-commit": "yarn run lint && yarn run format"
   },
   "husky"          : {
     "hooks": {
-      "pre-commit": "yarn run lint"
+      "pre-commit": "yarn run pre-commit"
     }
   },
   "devDependencies": {
