@@ -1,7 +1,7 @@
 {
   "name"            : "__MSG_ext_name__",
   "short_name"      : "__MSG_ext_short_name__",
-  "version"         : "1.0.0",
+  "version"         : "1.0.1",
   "description"     : "__MSG_ext_description__",
   "author"          : "__MSG_ext_author__",
   "homepage_url"    : "https://github.com/anein/github-status-extension",
@@ -17,9 +17,7 @@
   "background"      : {
     "scripts"   : [
       "js/background.js"
-    ],
-    "run_at"    : "document_end",
-    "persistent": false
+    ]
   },
 
   "browser_action"  : {
