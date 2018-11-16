@@ -8,7 +8,11 @@
 	</p>
 	<br>
   <a href="https://chrome.google.com/webstore/detail/githubcom-service-status/deljhiibgbhiilpbljbchaoclammdjgn">
-    <img src="https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_340x96.png" />
+    <img  align="left" src="https://developer.chrome.com/webstore/images/ChromeWebStore_Badge_v2_206x58.png" />
+  </a>
+  
+   <a href="https://addons.mozilla.org/en-US/firefox/addon/github-com-service-status/">
+    <img  align="left"  src="https://addons.cdn.mozilla.net/static/img/addons-buttons/AMO-button_1.png" />
   </a>
 	
 </div>
